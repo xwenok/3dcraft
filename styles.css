@@ -1,0 +1,1195 @@
+:root {
+    --primary-color: #9D4EDD; /* Основной цвет */
+    --primary-dark: #7B2CBF; /* Темный оттенок основного цвета */
+    --secondary-color: #240046; /* Вторичный цвет */
+    --accent-color: #FF6B6B; /* Акцентный цвет */
+    --text-dark: #2B2D42; /* Темный цвет текста */
+    --text-light: #8D99AE; /* Светлый цвет текста */
+    --background-light: #F8F9FA; /* Светлый фон */
+    --background-dark: #212529; /* Темный фон */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    --transition: all 0.3s ease; /* Переход */
+}
+
+* {
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box; /* Включаем padding и border в ширину и высоту элементов */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    line-height: 1.6; /* Высота строки */
+    color: var(--text-dark); /* Цвет текста */
+    background: var(--background-light); /* Фон */
+}
+
+.header {
+    background: var(--background-dark); /* Фон заголовка */
+    display: flex; /* Флексбокс */
+    align-items: center; /* Выравнивание по центру */
+    padding: 20px 40px; /* Внутренние отступы */
+    gap: 40px; /* Расстояние между элементами */
+    box-shadow: var(--shadow); /* Тень */
+}
+
+.logo-square {
+    width: 40px; /* Ширина */
+    height: 40px; /* Высота */
+    background: var(--primary-color); /* Фон */
+    border-radius: 8px; /* Скругление углов */
+    transition: var(--transition); /* Переход */
+}
+
+.logo-square:hover {
+    transform: rotate(45deg); /* Поворот при наведении */
+}
+
+nav {
+    display: flex; /* Флексбокс */
+    gap: 30px; /* Расстояние между элементами */
+}
+
+nav a {
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: 500; /* Толщина шрифта */
+    transition: var(--transition); /* Переход */
+    padding: 8px 16px; /* Внутренние отступы */
+    border-radius: 20px; /* Скругление углов */
+}
+
+nav a:hover {
+    background: var(--primary-color); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+
+.video-section {
+    width: 100%; /* Ширина */
+    background: var(--background-dark); /* Фон */
+}
+
+.video-container {
+    position: relative; /* Позиционирование */
+    width: 100%; /* Ширина */
+    height: 80vh; /* Высота */
+    margin-top: 0; /* Верхний отступ */
+    overflow: hidden; /* Скрытие переполнения */
+}
+
+.video-container::after {
+    content: ''; /* Пустое содержимое */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; /* Верх */
+    left: 0; /* Лево */
+    width: 100%; /* Ширина */
+    height: 100%; /* Высота */
+    background: rgba(0, 0, 0, 0.4); /* Фон */
+    z-index: 1; /* Значение z-index */
+}
+
+.video-container video {
+    width: 100%; /* Ширина */
+    height: 100%; /* Высота */
+    object-fit: cover; /* Покрытие */
+}
+
+.hero-content {
+    z-index: 2; /* Значение z-index */
+}
+
+section {
+    padding: 80px 40px; /* Внутренние отступы */
+}
+
+section h2 {
+    font-size: 2.5rem; /* Размер шрифта */
+    margin-bottom: 30px; /* Нижний отступ */
+    color: var(--secondary-color); /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+section p {
+    color: var(--text-light); /* Цвет текста */
+    max-width: 800px; /* Максимальная ширина */
+    margin: 0 auto 20px; /* Отступы */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.benefits {
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+}
+
+.benefits h2 {
+    color: white; /* Цвет текста */
+}
+
+.benefits-grid {
+    display: grid; /* Грид */
+    grid-template-columns: repeat(3, 1fr); /* Колонки */
+    gap: 30px; /* Расстояние между элементами */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Отступы */
+}
+
+.benefits-grid > div {
+    grid-column: span 1; /* Колонка */
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1); /* Фон */
+    padding: 30px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругление углов */
+    transition: var(--transition); /* Переход */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px); /* Смещение вверх при наведении */
+    background: rgba(255, 255, 255, 0.15); /* Фон при наведении */
+}
+
+.benefit-item h3 {
+    color: white; /* Цвет текста */
+    margin-bottom: 15px; /* Нижний отступ */
+    font-size: 1.5rem; /* Размер шрифта */
+}
+
+.benefit-item p {
+    color: rgba(255, 255, 255, 0.9); /* Цвет текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.gallery {
+    background: var(--background-light); /* Фон */
+    padding: 80px 0; /* Внутренние отступы */
+}
+
+.my-slider {
+    position: relative; /* Позиционирование */
+    width: 100%; /* Ширина */
+    overflow: hidden; /* Скрытие переполнения */
+    padding: 20px 0; /* Внутренние отступы */
+}
+
+.slides-container {
+    display: flex; /* Флексбокс */
+    transition: transform 0.5s ease-in-out; /* Переход */
+    gap: 20px; /* Расстояние между элементами */
+    width: 100%; /* Ширина */
+}
+
+.my-slide {
+    width: calc((100% - 40px) / 3); /* Ширина */
+    flex: 0 0 auto; /* Флекс */
+}
+
+.portfolio-card {
+    background: white; /* Фон */
+    border-radius: 12px; /* Скругление углов */
+    overflow: hidden; /* Скрытие переполнения */
+    box-shadow: var(--shadow); /* Тень */
+    height: 100%; /* Высота */
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+}
+
+.portfolio-card img {
+    width: 100%; /* Ширина */
+    height: 250px; /* Высота */
+    object-fit: cover; /* Покрытие */
+}
+
+.portfolio-card-content {
+    padding: 20px; /* Внутренние отступы */
+    flex-grow: 1; /* Рост флекса */
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+}
+
+.portfolio-card h3 {
+    color: var(--secondary-color); /* Цвет текста */
+    margin-bottom: 10px; /* Нижний отступ */
+    font-size: 1.2rem; /* Размер шрифта */
+}
+
+.portfolio-card p {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 20px; /* Нижний отступ */
+    flex-grow: 1; /* Рост флекса */
+}
+
+.portfolio-card .button {
+    display: inline-block; /* Встроенный блок */
+    padding: 12px 24px; /* Внутренние отступы */
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 25px; /* Скругление углов */
+    font-weight: 500; /* Толщина шрифта */
+    transition: var(--transition); /* Переход */
+    text-align: center; /* Выравнивание текста по центру */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Курсор */
+    margin-top: auto; /* Автоматический верхний отступ */
+}
+
+.portfolio-card .button:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+    box-shadow: var(--shadow); /* Тень */
+}
+
+.slider-nav {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Верх */
+    transform: translateY(-50%); /* Смещение */
+    width: 100%; /* Ширина */
+    margin: 0 auto; /* Отступы */
+    left: 0; /* Лево */
+    display: flex; /* Флексбокс */
+    justify-content: space-between; /* Распределение контента */
+    pointer-events: none; /* Отключение событий указателя */
+    z-index: 2; /* Значение z-index */
+}
+
+.slider-button {
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    width: 40px; /* Ширина */
+    height: 40px; /* Высота */
+    border-radius: 50%; /* Скругление углов */
+    cursor: pointer; /* Курсор */
+    display: flex; /* Флексбокс */
+    align-items: center; /* Выравнивание по центру */
+    justify-content: center; /* Распределение контента */
+    transition: var(--transition); /* Переход */
+    pointer-events: auto; /* Включение событий указателя */
+    box-shadow: var(--shadow); /* Тень */
+    margin: 0 20px; /* Отступы */
+}
+
+.slider-button:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: scale(1.1); /* Масштабирование при наведении */
+}
+
+.slider-button:disabled {
+    background: var(--text-light); /* Фон */
+    cursor: not-allowed; /* Курсор */
+    opacity: 0.5; /* Прозрачность */
+}
+
+@media (max-width: 1024px) {
+    .my-slide {
+        width: calc((100% - 20px) / 2); /* Ширина */
+    }
+}
+
+@media (max-width: 768px) {
+    .my-slide {
+        width: 100%; /* Ширина */
+    }
+}
+
+.portfolio-section {
+    padding: 80px 0; /* Внутренние отступы */
+    background: var(--background-light); /* Фон */
+}
+
+.portfolio-grid {
+    width: 100%; /* Ширина */
+    overflow: hidden; /* Скрытие переполнения */
+}
+
+.my-slider {
+    position: relative; /* Позиционирование */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Отступы */
+    padding: 0 40px; /* Внутренние отступы */
+}
+
+.slides-container {
+    display: flex; /* Флексбокс */
+    transition: transform 0.5s ease-in-out; /* Переход */
+    gap: 30px; /* Расстояние между элементами */
+}
+
+.my-slide {
+    min-width: calc((100% - 60px) / 3); /* Минимальная ширина */
+    flex: 0 0 auto; /* Флекс */
+}
+
+.portfolio-card {
+    background: white; /* Фон */
+    border-radius: 15px; /* Скругление углов */
+    overflow: hidden; /* Скрытие переполнения */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень */
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+    height: 100%; /* Высота */
+}
+
+.portfolio-card img {
+    width: 100%; /* Ширина */
+    height: 250px; /* Высота */
+    object-fit: cover; /* Покрытие */
+}
+
+.portfolio-card-content {
+    padding: 25px; /* Внутренние отступы */
+    flex-grow: 1; /* Рост флекса */
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+}
+
+.portfolio-card h3 {
+    font-size: 1.5rem; /* Размер шрифта */
+    margin-bottom: 15px; /* Нижний отступ */
+    color: var(--text-dark); /* Цвет текста */
+}
+
+.portfolio-card p {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 20px; /* Нижний отступ */
+    flex-grow: 1; /* Рост флекса */
+}
+
+.portfolio-card .button {
+    margin-top: auto; /* Автоматический верхний отступ */
+    align-self: flex-start; /* Выравнивание по левому краю */
+}
+
+.process-grid {
+    display: grid; /* Грид */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Колонки */
+    gap: 30px; /* Расстояние между элементами */
+    margin-top: 40px; /* Верхний отступ */
+}
+
+.process-item {
+    background: rgba(255, 255, 255, 0.1); /* Фон */
+    padding: 40px 30px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругление углов */
+    position: relative; /* Позиционирование */
+    transition: var(--transition); /* Переход */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.process-item:hover {
+    transform: translateY(-5px); /* Смещение вверх при наведении */
+    background: rgba(255, 255, 255, 0.15); /* Фон при наведении */
+}
+
+.process-number {
+    font-size: 1.2rem; /* Размер шрифта */
+    font-weight: 700; /* Толщина шрифта */
+    color: var(--primary-color); /* Цвет текста */
+    margin-bottom: 15px; /* Нижний отступ */
+    display: block; /* Блочное отображение */
+}
+
+.process-item h3 {
+    font-size: 1.5rem; /* Размер шрифта */
+    margin-bottom: 15px; /* Нижний отступ */
+    color: white; /* Цвет текста */
+}
+
+.process-item p {
+    color: rgba(255, 255, 255, 0.9); /* Цвет текста */
+    font-size: 1rem; /* Размер шрифта */
+    line-height: 1.6; /* Высота строки */
+}
+
+.work-prospects {
+    background: var(--background-dark); /* Фон */
+    color: white; /* Цвет текста */
+}
+
+.work-prospects h2 {
+    color: white; /* Цвет текста */
+}
+
+.work-prospects p {
+    color: var(--text-light); /* Цвет текста */
+}
+
+.second-gallery {
+    background: var(--background-light); /* Фон */
+}
+
+.second-gallery .my-slide {
+    background: white; /* Фон */
+    border-radius: 15px; /* Скругление углов */
+    padding: 60px 40px; /* Внутренние отступы */
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Отступы */
+    padding: 0 20px; /* Внутренние отступы */
+}
+
+.hero {
+    position: relative; /* Позиционирование */
+    height: auto; /* Высота */
+    overflow: hidden; /* Скрытие переполнения */
+}
+
+.hero-content {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Верх */
+    left: 50%; /* Лево */
+    transform: translate(-50%, -50%); /* Смещение */
+    text-align: center; /* Выравнивание текста по центру */
+    color: white; /* Цвет текста */
+    z-index: 2; /* Значение z-index */
+    width: 90%; /* Ширина */
+    max-width: 800px; /* Максимальная ширина */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* Размер шрифта */
+    margin-bottom: 20px; /* Нижний отступ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+.hero-content p {
+    font-size: 1.5rem; /* Размер шрифта */
+    margin-bottom: 30px; /* Нижний отступ */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+.cta-button {
+    display: inline-block; /* Встроенный блок */
+    padding: 15px 40px; /* Внутренние отступы */
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 30px; /* Скругление углов */
+    font-weight: 600; /* Толщина шрифта */
+    transition: var(--transition); /* Переход */
+    text-transform: uppercase; /* Верхний регистр */
+    letter-spacing: 1px; /* Межбуквенный интервал */
+}
+
+.cta-button:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+
+.software-item {
+    background: white; /* Фон */
+    border-radius: 15px; /* Скругление углов */
+    padding: 30px; /* Внутренние отступы */
+    margin-bottom: 30px; /* Нижний отступ */
+    box-shadow: var(--shadow); /* Тень */
+}
+
+.software-item h2 {
+    color: var(--secondary-color); /* Цвет текста */
+    margin-bottom: 20px; /* Нижний отступ */
+    font-size: 1.8rem; /* Размер шрифта */
+}
+
+.software-item h3 {
+    color: var(--primary-color); /* Цвет текста */
+    margin: 20px 0 10px; /* Отступы */
+    font-size: 1.2rem; /* Размер шрифта */
+}
+
+.software-item p {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 15px; /* Нижний отступ */
+    line-height: 1.6; /* Высота строки */
+}
+
+.software-item ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding-left: 0; /* Убираем внутренний отступ слева */
+    margin-bottom: 20px; /* Нижний отступ */
+}
+
+.software-item li {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 10px; /* Нижний отступ */
+    padding-left: 20px; /* Внутренний отступ слева */
+    position: relative; /* Позиционирование */
+}
+
+.software-item li:before {
+    content: "•"; /* Содержимое */
+    color: var(--primary-color); /* Цвет текста */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Лево */
+}
+
+.software-item .video-container {
+    position: relative; /* Позиционирование */
+    width: 100%; /* Ширина */
+    padding-bottom: 56.25%; /* Нижний внутренний отступ */
+    margin: 20px 0; /* Отступы */
+}
+
+.software-item .video-container iframe {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; /* Верх */
+    left: 0; /* Лево */
+    width: 100%; /* Ширина */
+    height: 100%; /* Высота */
+    border-radius: 8px; /* Скругление углов */
+}
+
+@media (max-width: 768px) {
+    .software-item {
+        padding: 20px; /* Внутренние отступы */
+    }
+    .video-container{
+        height: 110vh; /* Высота */
+    }
+    .software-item h2 {
+        font-size: 1.5rem; /* Размер шрифта */
+    }
+
+    .software-item h3 {
+        font-size: 1.1rem; /* Размер шрифта */
+    }
+}
+
+.basics-hero,
+.software-hero,
+.courses-hero {
+    background: var(--background-dark); /* Фон */
+    color: white; /* Цвет текста */
+    padding: 100px 0; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.basics-hero h1,
+.software-hero h1,
+.courses-hero h1 {
+    font-size: 3rem; /* Размер шрифта */
+    margin-bottom: 20px; /* Нижний отступ */
+}
+
+.basics-hero p,
+.software-hero p,
+.courses-hero p {
+    font-size: 1.2rem; /* Размер шрифта */
+    color: var(--text-light); /* Цвет текста */
+}
+
+.basics-content,
+.software-content,
+.courses-content {
+    padding: 80px 0; /* Внутренние отступы */
+    background: var(--background-light); /* Фон */
+}
+
+.basics-grid,
+.software-grid {
+    display: grid; /* Грид */
+    grid-template-columns: repeat(2, 1fr); /* Колонки */
+    gap: 40px; /* Расстояние между элементами */
+    margin-top: 40px; /* Верхний отступ */
+}
+
+.basics-item,
+.software-item {
+    background: white; /* Фон */
+    padding: 40px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругление углов */
+    box-shadow: var(--shadow); /* Тень */
+}
+
+.basics-item h2,
+.software-item h2 {
+    color: var(--secondary-color); /* Цвет текста */
+    font-size: 1.8rem; /* Размер шрифта */
+    margin-bottom: 20px; /* Нижний отступ */
+}
+
+.basics-item p,
+.software-item p {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 20px; /* Нижний отступ */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.basics-item ul,
+.basics-item ol,
+.software-item ul {
+    padding-left: 20px; /* Внутренний отступ слева */
+    color: var(--text-light); /* Цвет текста */
+}
+
+.basics-item li,
+.software-item li {
+    margin-bottom: 10px; /* Нижний отступ */
+}
+
+.software-link {
+    display: inline-block; /* Встроенный блок */
+    padding: 12px 24px; /* Внутренние отступы */
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 25px; /* Скругление углов */
+    margin-top: 20px; /* Верхний отступ */
+    transition: var(--transition); /* Переход */
+}
+
+.software-link:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+
+.courses-grid {
+    display: grid; /* Грид */
+    grid-template-columns: repeat(2, 1fr); /* Колонки */
+    gap: 40px; /* Расстояние между элементами */
+    margin-top: 40px; /* Верхний отступ */
+}
+
+.course-card {
+    background: white; /* Фон */
+    border-radius: 15px; /* Скругление углов */
+    overflow: hidden; /* Скрытие переполнения */
+    box-shadow: var(--shadow); /* Тень */
+}
+
+.course-image {
+    width: 100%; /* Ширина */
+    height: 250px; /* Высота */
+    overflow: hidden; /* Скрытие переполнения */
+}
+
+.course-image img {
+    width: 100%; /* Ширина */
+    height: 100%; /* Высота */
+    object-fit: cover; /* Покрытие */
+    transition: var(--transition); /* Переход */
+}
+
+.course-card:hover .course-image img {
+    transform: scale(1.05); /* Масштабирование при наведении */
+}
+
+.course-info {
+    padding: 30px; /* Внутренние отступы */
+}
+
+.course-info h2 {
+    color: var(--secondary-color); /* Цвет текста */
+    font-size: 1.8rem; /* Размер шрифта */
+    margin-bottom: 15px; /* Нижний отступ */
+}
+
+.course-info p {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 20px; /* Нижний отступ */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.course-info ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin-bottom: 25px; /* Нижний отступ */
+}
+
+.course-info li {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 10px; /* Нижний отступ */
+    padding-left: 25px; /* Внутренний отступ слева */
+    position: relative; /* Позиционирование */
+}
+
+.course-info li:before {
+    content: "•"; /* Содержимое */
+    color: var(--primary-color); /* Цвет текста */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Лево */
+    font-size: 1.5em; /* Размер шрифта */
+    line-height: 1; /* Высота строки */
+}
+
+.course-button {
+    display: inline-block; /* Встроенный блок */
+    padding: 12px 30px; /* Внутренние отступы */
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 25px; /* Скругление углов */
+    transition: var(--transition); /* Переход */
+    font-weight: 500; /* Толщина шрифта */
+}
+
+.course-button:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+
+@media (max-width: 768px) {
+    .basics-grid,
+    .software-grid,
+    .courses-grid {
+        grid-template-columns: 1fr; /* Колонки */
+    }
+
+    .basics-hero h1,
+    .software-hero h1,
+    .courses-hero h1 {
+        font-size: 2.5rem; /* Размер шрифта */
+    }
+
+    .basics-item,
+    .software-item {
+        padding: 30px; /* Внутренние отступы */
+    }
+
+    .course-image {
+        height: 200px; /* Высота */
+    }
+}
+
+.contact-section {
+    background: var(--background-light); /* Фон */
+    padding: 80px 0; /* Внутренние отступы */
+}
+
+.contact-form {
+    max-width: 600px; /* Максимальная ширина */
+    margin: 40px auto 0; /* Отступы */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Нижний отступ */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Ширина */
+    padding: 15px; /* Внутренние отступы */
+    border: 2px solid var(--text-light); /* Граница */
+    border-radius: 8px; /* Скругление углов */
+    background: white; /* Фон */
+    font-size: 1rem; /* Размер шрифта */
+    transition: var(--transition); /* Переход */
+}
+
+.form-group textarea {
+    height: 150px; /* Высота */
+    resize: vertical; /* Вертикальное изменение размера */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color); /* Цвет границы при фокусе */
+    outline: none; /* Убираем контур */
+}
+
+.submit-button {
+    width: 100%; /* Ширина */
+    padding: 15px; /* Внутренние отступы */
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 8px; /* Скругление углов */
+    font-size: 1rem; /* Размер шрифта */
+    font-weight: 600; /* Толщина шрифта */
+    cursor: pointer; /* Курсор */
+    transition: var(--transition); /* Переход */
+}
+
+.submit-button:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+
+.footer-nav {
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+    gap: 10px; /* Расстояние между элементами */
+    margin: 20px 0; /* Отступы */
+}
+
+.footer-nav a {
+    color: var(--text-light); /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: var(--transition); /* Переход */
+    font-size: 1rem; /* Размер шрифта */
+    display: inline-flex; /* Встроенный флекс */
+    align-items: center; /* Выравнивание по центру */
+}
+
+.footer-nav a:hover {
+    color: white; /* Цвет текста при наведении */
+    transform: translateX(5px); /* Смещение вправо при наведении */
+}
+
+.footer {
+    background: var(--background-dark); /* Фон */
+    color: white; /* Цвет текста */
+    padding: 80px 0; /* Внутренние отступы */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Верхняя граница */
+}
+
+.footer-content {
+    display: grid; /* Грид */
+    grid-template-columns: 1.5fr 1fr 1fr; /* Колонки */
+    gap: 40px; /* Расстояние между элементами */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Отступы */
+    padding: 0 20px; /* Внутренние отступы */
+}
+
+.footer-info {
+    max-width: 350px; /* Максимальная ширина */
+}
+
+.footer-info h3,
+.footer-contact h3 {
+    font-size: 1.8rem; /* Размер шрифта */
+    margin-bottom: 20px; /* Нижний отступ */
+    color: white; /* Цвет текста */
+    font-weight: 600; /* Толщина шрифта */
+}
+
+.footer-info p,
+.footer-contact p {
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 15px; /* Нижний отступ */
+    line-height: 1.6; /* Высота строки */
+}
+
+.footer-nav {
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+    gap: 12px; /* Расстояние между элементами */
+    margin: 25px 0; /* Отступы */
+}
+
+.social-links {
+    display: flex; /* Флексбокс */
+    gap: 20px; /* Расстояние между элементами */
+    margin-top: 25px; /* Верхний отступ */
+}
+
+.social-icon {
+    color: var(--text-light); /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: var(--transition); /* Переход */
+    font-size: 1.3rem; /* Размер шрифта */
+}
+
+.social-icon:hover {
+    color: var(--primary-color); /* Цвет текста при наведении */
+    transform: translateY(-3px); /* Смещение вверх при наведении */
+}
+
+.footer-contact {
+    padding-top: 10px; /* Верхний внутренний отступ */
+}
+
+.footer-quote {
+    padding-top: 10px; /* Верхний внутренний отступ */
+    max-width: 300px; /* Максимальная ширина */
+}
+
+.quote {
+    font-style: italic; /* Курсив */
+    color: var(--text-light); /* Цвет текста */
+    border-left: 3px solid var(--primary-color); /* Левая граница */
+    padding: 0 0 0 20px; /* Внутренние отступы */
+    font-size: 1.1rem; /* Размер шрифта */
+    line-height: 1.6; /* Высота строки */
+    margin: 0; /* Отступы */
+}
+
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr; /* Колонки */
+    }
+
+    .footer-quote {
+        grid-column: 1 / -1; /* Колонка */
+        max-width: 100%; /* Максимальная ширина */
+        padding-top: 20px; /* Верхний внутренний отступ */
+    }
+
+    .quote {
+        max-width: 500px; /* Максимальная ширина */
+        margin: 0 auto; /* Отступы */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0; /* Внутренние отступы */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* Колонки */
+        gap: 40px; /* Расстояние между элементами */
+    }
+
+    .footer-info,
+    .footer-contact {
+        max-width: 100%; /* Максимальная ширина */
+        text-align: center; /* Выравнивание текста по центру */
+    }
+
+    .footer-nav {
+        align-items: center; /* Выравнивание по центру */
+    }
+
+    .footer-nav a:hover {
+        transform: translateY(-2px); /* Смещение вверх при наведении */
+    }
+
+    .social-links {
+        justify-content: center; /* Выравнивание по центру */
+    }
+
+    .footer-quote {
+        padding-top: 0; /* Верхний внутренний отступ */
+    }
+
+    .quote {
+        text-align: center; /* Выравнивание текста по центру */
+        border-left: none; /* Убираем левую границу */
+        border-top: 3px solid var(--primary-color); /* Верхняя граница */
+        padding: 20px 0 0 0; /* Внутренние отступы */
+    }
+}
+
+@media (max-width: 768px) {
+    .slides-container {
+        grid-template-columns: 1fr; /* Колонки */
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr; /* Колонки */
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); } /* Начальное состояние */
+    to { opacity: 1; transform: translateY(0); } /* Конечное состояние */
+}
+
+.benefit-item {
+    animation: fadeIn 0.5s ease forwards; /* Анимация */
+}
+
+.courses-grid {
+    display: grid; /* Грид */
+    gap: 30px; /* Расстояние между элементами */
+    margin-top: 40px; /* Верхний отступ */
+}
+
+.course-card {
+    background: white; /* Фон */
+    border-radius: 15px; /* Скругление углов */
+    overflow: hidden; /* Скрытие переполнения */
+    box-shadow: var(--shadow); /* Тень */
+    transition: var(--transition); /* Переход */
+}
+
+.course-card:hover {
+    transform: translateY(-5px); /* Смещение вверх при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Тень при наведении */
+}
+
+.course-info {
+    padding: 30px; /* Внутренние отступы */
+}
+
+.course-header {
+    margin-bottom: 20px; /* Нижний отступ */
+}
+
+.course-header h2 {
+    color: var(--secondary-color); /* Цвет текста */
+    font-size: 1.5rem; /* Размер шрифта */
+    margin-bottom: 15px; /* Нижний отступ */
+}
+
+.course-meta {
+    display: flex; /* Флексбокс */
+    gap: 20px; /* Расстояние между элементами */
+    color: var(--text-light); /* Цвет текста */
+    font-size: 0.9rem; /* Размер шрифта */
+    margin-bottom: 15px; /* Нижний отступ */
+}
+
+.course-meta span {
+    display: flex; /* Флексбокс */
+    align-items: center; /* Выравнивание по центру */
+}
+
+.course-meta .rating::before {
+    content: "★"; /* Содержимое */
+    color: #ffd700; /* Цвет текста */
+    margin-right: 5px; /* Правый отступ */
+}
+
+.course-price {
+    display: flex; /* Флексбокс */
+    flex-direction: column; /* Направление флекса */
+    gap: 5px; /* Расстояние между элементами */
+}
+
+.course-price .monthly {
+    font-size: 1.2rem; /* Размер шрифта */
+    color: var(--primary-color); /* Цвет текста */
+    font-weight: 600; /* Толщина шрифта */
+}
+
+.course-price .total {
+    color: var(--text-light); /* Цвет текста */
+}
+
+.course-price .total s {
+    color: var(--text-light); /* Цвет текста */
+    opacity: 0.7; /* Прозрачность */
+    margin-right: 10px; /* Правый отступ */
+}
+
+.course-details {
+    margin-top: 20px; /* Верхний отступ */
+}
+
+.course-details h3 {
+    color: var(--primary-dark); /* Цвет текста */
+    font-size: 1.2rem; /* Размер шрифта */
+    margin: 20px 0 15px; /* Отступы */
+}
+
+.course-details ul,
+.course-details ol {
+    list-style-position: inside; /* Позиция маркеров списка */
+    color: var(--text-light); /* Цвет текста */
+    margin-bottom: 20px; /* Нижний отступ */
+}
+
+.course-details li {
+    margin-bottom: 10px; /* Нижний отступ */
+    line-height: 1.5; /* Высота строки */
+}
+
+.course-button {
+    display: inline-block; /* Встроенный блок */
+    padding: 12px 30px; /* Внутренние отступы */
+    background: var(--primary-color); /* Фон */
+    color: white; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 25px; /* Скругление углов */
+    font-weight: 500; /* Толщина шрифта */
+    transition: var(--transition); /* Переход */
+    margin-top: 20px; /* Верхний отступ */
+}
+
+.course-button:hover {
+    background: var(--primary-dark); /* Фон при наведении */
+    transform: translateY(-2px); /* Смещение вверх при наведении */
+}
+
+@media (max-width: 768px) {
+    .course-info {
+        padding: 20px; /* Внутренние отступы */
+    }
+
+    .course-header h2 {
+        font-size: 1.3rem; /* Размер шрифта */
+    }
+
+    .course-meta {
+        flex-wrap: wrap; /* Перенос флекса */
+    }
+
+    .course-price {
+        margin-top: 10px; /* Верхний отступ */
+    }
+}
+
+.mobile-menu-btn {
+    display: none; /* Скрыть */
+    background: none; /* Убираем фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Курсор */
+    padding: 10px; /* Внутренние отступы */
+    z-index: 1000; /* Значение z-index */
+}
+
+.mobile-menu-btn span {
+    display: block; /* Блочное отображение */
+    width: 25px; /* Ширина */
+    height: 3px; /* Высота */
+    margin: 5px 0; /* Отступы */
+    background: white; /* Фон */
+    transition: var(--transition); /* Переход */
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px; /* Внутренние отступы */
+        position: relative; /* Позиционирование */
+        justify-content: space-between; /* Распределение контента */
+    }
+
+    .mobile-menu-btn {
+        display: block; /* Показать */
+    }
+
+    nav {
+        position: fixed; /* Фиксированное позиционирование */
+        top: 0; /* Верх */
+        right: -100%; /* Право */
+        height: 100vh; /* Высота */
+        width: 70%; /* Ширина */
+        background: var(--background-dark); /* Фон */
+        flex-direction: column; /* Направление флекса */
+        padding: 80px 40px; /* Внутренние отступы */
+        transition: var(--transition); /* Переход */
+        z-index: 999; /* Значение z-index */
+    }
+
+    nav.active {
+        right: 0; /* Право */
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px); /* Поворот и смещение */
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0; /* Прозрачность */
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px); /* Поворот и смещение */
+    }
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
